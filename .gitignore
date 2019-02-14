@@ -1,0 +1,13 @@
+SimpleNews.xcodeproj/project.xcworkspace
+SimpleNews.xcodeproj/xcuserdata
+SimpleNews.xcworkspace/xcuserdata
+SimpleNews.xcworkspace/xcshareddata/SimpleNews.xcscmblueprint
+
+.DS_Store
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts/
+
+Carthage/Build/
