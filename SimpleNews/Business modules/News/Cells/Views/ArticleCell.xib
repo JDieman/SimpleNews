@@ -22,22 +22,33 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iHk-pn-X5h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="235.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8qx-LM-5Pf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArticleImageView" translatesAutoresizingMaskIntoConstraints="NO" id="8qx-LM-5Pf" customClass="ArticleImageView" customModule="SimpleNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="141.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIl-di-T8E" customClass="SubTitleLabel" customModule="SimpleNews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="200" width="320" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIl-di-T8E" customClass="SubTitleLabel" customModule="SimpleNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="141.5" width="320" height="72.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3U-56-fxH" customClass="DescriptionLabel" customModule="SimpleNews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="220.5" width="320" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3U-56-fxH" customClass="DescriptionLabel" customModule="SimpleNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="214" width="320" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-BZ-lf3">
+                                <rect key="frame" x="0.0" y="234.5" width="320" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="MnJ-Ju-Fnz"/>
+                                </constraints>
+                            </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Go7-BZ-lf3" secondAttribute="trailing" id="JCh-j0-OfY"/>
+                            <constraint firstItem="Go7-BZ-lf3" firstAttribute="leading" secondItem="iHk-pn-X5h" secondAttribute="leading" id="VUl-ZU-u5u"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
@@ -45,14 +56,19 @@
                     <constraint firstAttribute="trailing" secondItem="iHk-pn-X5h" secondAttribute="trailing" id="YMR-9O-cKY"/>
                     <constraint firstAttribute="bottom" secondItem="iHk-pn-X5h" secondAttribute="bottom" id="ZYK-lN-USf"/>
                     <constraint firstItem="iHk-pn-X5h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lMJ-o8-mZ4"/>
+                    <constraint firstItem="8qx-LM-5Pf" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.6" id="vE8-we-PyD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="articleImageView" destination="8qx-LM-5Pf" id="85l-sL-NqH"/>
                 <outlet property="dateLabel" destination="P3U-56-fxH" id="djf-xg-xMy"/>
                 <outlet property="titleLabel" destination="LIl-di-T8E" id="Beu-hC-vie"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="233.88305847076464"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ArticleImageView" width="16" height="16"/>
+    </resources>
 </document>

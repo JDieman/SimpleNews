@@ -10,7 +10,7 @@ import Foundation
 import CoreGraphics
 
 struct ArticleCellModel {
-    let height: CGFloat = 150
+    let height: CGFloat = 250
     let title: String
     let imageUrl: URL?
     let date: Date?

@@ -12,7 +12,7 @@ class NewsTableView: UITableView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        separatorStyle = .none
     }
 
 }

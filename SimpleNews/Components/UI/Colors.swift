@@ -11,7 +11,7 @@ import UIKit
 struct Colors {
     
     static var main: UIColor {
-        return .blue
+        return .darkGray
     }
     
     static var secondary: UIColor {
