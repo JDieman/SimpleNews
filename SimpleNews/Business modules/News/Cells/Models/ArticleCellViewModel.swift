@@ -11,7 +11,7 @@ import CoreGraphics
 import AlamofireImage
 
 struct ArticleCellViewModel {
-    let height: CGFloat = 250
+    let height: CGFloat = 280
     let article: Article
     
     init?(article: Article) {

@@ -28,9 +28,9 @@ final class ArticleViewController: UIViewController, InitialSetuping {
         if let imageUrl = model.article.imageUrl {
             imageView.setImage(with: imageUrl)
         }
-        titleLabel.text = model.article.title ?? ""
+        titleLabel.text = model.article.title
         dateLabel.text = model.article.date?.formatted ?? ""
-        contentLabel.text = model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description + model.article.description
+        contentLabel.text = model.article.description
     }
     
     override func viewWillAppear(_ animated: Bool) {

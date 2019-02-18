@@ -6,13 +6,9 @@
 //  Copyright © 2019 Dmitry Polyakov. All rights reserved.
 //
 
-struct Factory {
+struct ControllersFactory {
     
     private init() {}
-    
-    static var networkClient: NetworkClient {
-        return MoyaNetworkClient()
-    }
     
     static func getNewsController(delegate: NewsCollectionControllerDelegate) -> NewsControllerProtocol {
         return NewsCollectionController(delegate: delegate)
