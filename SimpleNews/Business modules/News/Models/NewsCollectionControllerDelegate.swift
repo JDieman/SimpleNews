@@ -7,5 +7,5 @@
 //
 
 protocol NewsCollectionControllerDelegate: AnyObject {
-    //...
+    func pushArticleVC(for model: ArticleInputModel)
 }

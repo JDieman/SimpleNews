@@ -10,12 +10,12 @@ import Foundation
 
 struct Article: Decodable {
     
-    var title: String?
+    var title: String
     var author: String?
-    var description: String?
+    var description: String
     private var url: String?
-    private var urlToImage: String?
-    var publishedAt: String?
+    private var urlToImage: String
+    var publishedAt: String
     var content: String?
     var source: ArticleSource?
     
@@ -23,9 +23,10 @@ struct Article: Decodable {
         return URL(string: url ?? "")
     }
     var imageUrl: URL? {
-        return URL(string: urlToImage ?? "")
+        return URL(string: urlToImage)
     }
     var date: Date?{
         return Date(string: publishedAt)
     }
+    
 }

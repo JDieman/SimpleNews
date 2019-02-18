@@ -13,6 +13,9 @@ struct Colors {
     static var main: UIColor {
         return .darkGray
     }
+    static var regularText: UIColor {
+        return .darkGray
+    }
     
     static var secondary: UIColor {
         return .gray

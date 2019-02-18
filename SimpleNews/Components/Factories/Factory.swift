@@ -7,6 +7,9 @@
 //
 
 struct Factory {
+    
+    private init() {}
+    
     static var networkClient: NetworkClient {
         return MoyaNetworkClient()
     }

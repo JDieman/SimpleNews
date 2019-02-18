@@ -30,7 +30,7 @@ extension NewsCollectionController: NewsControllerProtocol {
     func cell(in tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: cellName), for: indexPath) as? ArticleCell,
             let model = items[safe: indexPath.row] else { return UITableViewCell() }
-        cell.prepareCell(model)
+        model.setup(cell: cell)
         return cell
     }
     
@@ -43,10 +43,14 @@ extension NewsCollectionController: NewsControllerProtocol {
     }
     
     func update(_ news: News) {
-        items = news.articles.compactMap({
-            ArticleCellViewModel(title: $0.title, imageUrl: $0.imageUrl, date: $0.date)
-        })
+        items = news.articles.compactMap({ ArticleCellViewModel(article: $0) })
     }
     
+    func didSelectRow(at indexPath: IndexPath, in tableView: UITableView) {
+        guard let model = items[safe: indexPath.row] else { return }
+        delegate.pushArticleVC(for: ArticleInputModel(article: model.article))
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
     
 }

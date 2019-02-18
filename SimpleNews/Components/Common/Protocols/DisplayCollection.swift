@@ -13,6 +13,7 @@ protocol DisplayCollection {
     func numberOfRows(in section: Int) -> Int
     func height(forRow indexPath: IndexPath) -> CGFloat
     func registerCells(in tableView: UITableView)
+    func didSelectRow(at indexPath: IndexPath, in tableView: UITableView)
 }
 
 extension DisplayCollection {

@@ -26,6 +26,11 @@ class NewsViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         newsService.getNews(theme: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
 }
 
@@ -44,6 +49,10 @@ extension NewsViewController: NewsServiceDelegate {
 
 extension NewsViewController: NewsCollectionControllerDelegate {
     
+    func pushArticleVC(for model: ArticleInputModel) {
+        Router.pushArticleVC(from: self, for: model, animated: true)
+    }
+
 }
 
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -58,6 +67,10 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return newsController.height(forRow: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        return newsController.didSelectRow(at: indexPath, in: tableView)
     }
     
 }
