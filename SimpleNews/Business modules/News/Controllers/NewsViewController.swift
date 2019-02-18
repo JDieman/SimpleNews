@@ -10,8 +10,8 @@ import UIKit
 
 class NewsViewController: UIViewController {
 
-    private lazy var newsController = Factory.getNewsController(delegate: self)
-    private lazy var newsService = NewsService(delegate: self, networkClient: Factory.networkClient)
+    private lazy var newsController = ControllersFactory.getNewsController(delegate: self)
+    private lazy var newsService = NewsService(delegate: self, networkClient: NetworkFactory.networkClient)
     
     @IBOutlet var tableView: NewsTableView! {
         didSet {
@@ -42,7 +42,13 @@ extension NewsViewController: NewsServiceDelegate {
     }
     
     func onError(_ message: String) {
-        //...
+        let alert = UIAlertController(title: Localization.errorTitle.string, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Localization.repeatTitle.string, style: .default, handler: {
+            [weak self]
+            _ in
+            self?.newsService.getNews(theme: nil)
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
 }

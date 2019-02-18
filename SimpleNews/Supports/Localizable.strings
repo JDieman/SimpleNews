@@ -8,3 +8,5 @@
 
 "defaultError" = "Что-то пошло не так";
 "linkButtonTitle" = "Подробнее...";
+"errorTitle" = "Ошибка";
+"repeatTitle" = "Повторить запрос";

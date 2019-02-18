@@ -11,6 +11,8 @@ import Foundation
 enum Localization: String {
     case defaultError
     case linkButtonTitle
+    case errorTitle
+    case repeatTitle
     
     var string: String {
         return NSLocalizedString(self.rawValue, comment: self.rawValue)
