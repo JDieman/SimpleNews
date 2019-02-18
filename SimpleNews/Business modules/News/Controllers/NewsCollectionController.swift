@@ -12,7 +12,7 @@ final class NewsCollectionController {
     
     private let cellName = ArticleCell.self
     private unowned var delegate: NewsCollectionControllerDelegate
-    private var items: [ArticleCellModel] = []
+    private var items: [ArticleCellViewModel] = []
     
     init( delegate: NewsCollectionControllerDelegate) {
         self.delegate = delegate
@@ -44,7 +44,7 @@ extension NewsCollectionController: NewsControllerProtocol {
     
     func update(_ news: News) {
         items = news.articles.compactMap({
-            ArticleCellModel(title: $0.title, imageUrl: $0.imageUrl, date: $0.date)
+            ArticleCellViewModel(title: $0.title, imageUrl: $0.imageUrl, date: $0.date)
         })
     }
     

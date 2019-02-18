@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import AlamofireImage
 
 class ArticleCell: UITableViewCell {
 
-    private var model: ArticleCellModel?
+    var model: ArticleCellViewModel?
     
     @IBOutlet var articleImageView: ArticleImageView!
     @IBOutlet var titleLabel: SubTitleLabel!
@@ -28,30 +27,9 @@ class ArticleCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepareCell(_ model: ArticleCellModel) {
+    func prepareCell(_ model: ArticleCellViewModel) {
         self.model = model
-        titleLabel.text = model.title
-        dateLabel.text = model.date?.formatted ?? ""
-        articleImageView.image = nil
-        if let url = model.imageUrl {
-            articleImageView.af_setImage(withURL: url, placeholderImage: nil, filter: nil, progress: nil, progressQueue: DispatchQueue.global(), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: true) {
-                [weak self]
-                (response) in
-                if self?.model?.imageUrl != model.imageUrl {
-                    self?.articleImageView.image = nil
-                }
-            }
-        }
-        
-        
-        
-        
-//        af_setImageWithURL(URL, placeholderImage: nil, filter: nil, imageTransition: .None, completion: { (response) -> Void in
-//            print("image: \(cell.imageView.image)")
-//            print(response.result.value) //# UIImage
-//            print(response.result.error) //# NSError
-//
-//        })
+        model.setup(cell: self)
     }
     
 }
