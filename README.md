@@ -1,0 +1,3 @@
+# SimpleNews
+
+Read daily news.
