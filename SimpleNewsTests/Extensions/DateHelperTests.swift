@@ -9,9 +9,9 @@
 import XCTest
 @testable import SimpleNews
 
-class DateTests: XCTestCase {
+class DateHelperTests: XCTestCase {
     
-    private enum DateKey: String, CaseIterable {
+    private enum DateValue: String, CaseIterable {
         
         case past, present, future
         
@@ -56,7 +56,7 @@ class DateTests: XCTestCase {
     /// Testing new Date init wth string parameter
     func testInitDateFromString() {
         
-        for dateKey in DateKey.allCases {
+        for dateKey in DateValue.allCases {
             let result = Date(string: dateKey.stringDate)
             XCTAssertTrue(result == dateKey.date, dateKey.description)
         }
@@ -65,7 +65,7 @@ class DateTests: XCTestCase {
     /// Testing new Date computed property "formatted"
     func testGettingFormattedStringFromDate() {
         
-        for dateKey in DateKey.allCases {
+        for dateKey in DateValue.allCases {
             let result = dateKey.formattedString
             XCTAssertTrue(result == dateKey.date.formatted, dateKey.description)
         }
