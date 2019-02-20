@@ -11,7 +11,7 @@ import XCTest
 
 class DateTests: XCTestCase {
     
-    enum DateKey: String, CaseIterable {
+    private enum DateKey: String, CaseIterable {
         
         case past, present, future
         
