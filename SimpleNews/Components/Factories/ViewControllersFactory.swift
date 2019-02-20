@@ -12,14 +12,14 @@ struct ViewControllersFactory {
     
     private init() {}
     
-    static func getArticleVC(_ inputModel: ArticleInputModel) -> UIViewController {
-        return getVC(inputModel) as ArticleViewController
+    static func getArticleVC(for viewModel: ArticleViewModel) -> UIViewController {
+        let vc = getVC() as ArticleViewController
+        vc.viewModel = viewModel
+        return vc
     }
     
-    private static func getVC<T: InitialSetuping>(_ inputModel: ControllerInputModel) -> T {
-        let vc = T(nibName: String(describing: T.self), bundle: nil)
-        vc.initialSetup(inputModel)
-        return vc
+    private static func getVC<T: UIViewController>() -> T {
+        return T(nibName: String(describing: T.self), bundle: nil)
     }
     
 }

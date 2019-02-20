@@ -8,43 +8,32 @@
 
 import UIKit
 
-final class ArticleViewController: UIViewController, InitialSetuping {
+final class ArticleViewController: UIViewController {
 
-    private var model: ArticleInputModel?
+    var viewModel: ArticleViewModel?
     
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var titleLabel: TitleLabel!
-    @IBOutlet private var dateLabel: DescriptionLabel!
-    @IBOutlet private var contentLabel: RegularLabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var titleLabel: TitleLabel!
+    @IBOutlet var dateLabel: DescriptionLabel!
+    @IBOutlet var contentLabel: RegularLabel!
     @IBOutlet var linkButton: UIButton! {
         didSet {
-            linkButton.setTitle(Localization.linkButtonTitle.string, for: .normal)
+            linkButton.setTitle(viewModel?.linkButtonTitle, for: .normal)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let model = model else { return }
-        if let imageUrl = model.article.imageUrl {
-            imageView.setImage(with: imageUrl)
-        }
-        titleLabel.text = model.article.title
-        dateLabel.text = model.article.date?.formatted ?? ""
-        contentLabel.text = model.article.description
+        viewModel?.initialSetup(vc: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    func initialSetup(_ model: ControllerInputModel) {
-        self.model = model as? ArticleInputModel
+        viewModel?.navigationBarSetup(in: self.navigationController)
     }
     
     @IBAction private func onTapLinkButton(_ sender: Any) {
-        guard let url = model?.article.sourceUrl else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        viewModel?.linkButtonTappedAction()
     }
     
 }

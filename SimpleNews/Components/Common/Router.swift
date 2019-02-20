@@ -13,6 +13,7 @@ struct Router {
     private init() {}
     
     static func pushArticleVC(from vc: UIViewController, for model: ArticleInputModel, animated: Bool) {
-        vc.navigationController?.pushViewController(ViewControllersFactory.getArticleVC(model), animated: animated)
+        let viewModel = ViewModelsFactory.getArticleVM(model)
+        vc.navigationController?.pushViewController(ViewControllersFactory.getArticleVC(for: viewModel), animated: animated)
     }
 }

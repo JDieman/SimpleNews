@@ -6,6 +6,6 @@
 //  Copyright © 2019 Dmitry Polyakov. All rights reserved.
 //
 
-struct ArticleInputModel: ControllerInputModel {
+struct ArticleInputModel {
     var article: Article
 }

@@ -13,7 +13,7 @@ class NewsViewController: UIViewController {
     private lazy var newsController = ControllersFactory.getNewsController(delegate: self)
     private lazy var newsService = NewsService(delegate: self, networkClient: NetworkFactory.networkClient)
     
-    @IBOutlet var tableView: NewsTableView! {
+    @IBOutlet private var tableView: NewsTableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
