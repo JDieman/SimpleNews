@@ -23,7 +23,7 @@ struct Fonts {
     }
     
     static var small: UIFont {
-        return .systemFont(ofSize: 10)
+        return .systemFont(ofSize: 13)
     }
     
 }
