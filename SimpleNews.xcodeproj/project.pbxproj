@@ -44,6 +44,8 @@
 		0A898B7D2215B8FD008FC357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A898B7B2215B8FD008FC357 /* Main.storyboard */; };
 		0A898B7F2215B8FE008FC357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A898B7E2215B8FE008FC357 /* Assets.xcassets */; };
 		0A898B822215B8FE008FC357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A898B802215B8FE008FC357 /* LaunchScreen.storyboard */; };
+		7E42673B221DC5D200DBC2AD /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42673A221DC5D200DBC2AD /* Appearance.swift */; };
+		7E42673D221DCA4500DBC2AD /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E42673C221DCA4500DBC2AD /* UIColorHelper.swift */; };
 		7E4C698D221B2F4A00D02783 /* NetworkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C698C221B2F4A00D02783 /* NetworkFactory.swift */; };
 		7E4C698F221D5CA400D02783 /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C698E221D5CA400D02783 /* DateHelperTests.swift */; };
 		7E4C6993221D86EC00D02783 /* NewsControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C6992221D86EC00D02783 /* NewsControllerTests.swift */; };
@@ -113,6 +115,8 @@
 		0A898B832215B8FE008FC357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A898B882215B8FE008FC357 /* SimpleNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A898B8E2215B8FE008FC357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E42673A221DC5D200DBC2AD /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		7E42673C221DCA4500DBC2AD /* UIColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
 		7E4C698C221B2F4A00D02783 /* NetworkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFactory.swift; sourceTree = "<group>"; };
 		7E4C698E221D5CA400D02783 /* DateHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
 		7E4C6992221D86EC00D02783 /* NewsControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsControllerTests.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				0A35FB222216128D0018C7D2 /* UITableViewHelper.swift */,
 				0A35FB24221614D00018C7D2 /* CollectionHelper.swift */,
 				7EC85EC7221B129800F988E3 /* UIImageViewHelper.swift */,
+				7E42673C221DCA4500DBC2AD /* UIColorHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				0A35FB27221617C10018C7D2 /* Labels */,
 				0A35FB2A221618810018C7D2 /* Fonts.swift */,
 				0A35FB2C221618C60018C7D2 /* Colors.swift */,
+				7E42673A221DC5D200DBC2AD /* Appearance.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				0A35FB29221617D20018C7D2 /* TitleLabel.swift in Sources */,
 				0A35FB2F2216191B0018C7D2 /* SubtitleLabel.swift in Sources */,
 				7EC85EBC221B0B9900F988E3 /* ArticleViewController.swift in Sources */,
+				7E42673B221DC5D200DBC2AD /* Appearance.swift in Sources */,
 				0A35FAFA2215FAE20018C7D2 /* Article.swift in Sources */,
 				7E4C6998221DB83600D02783 /* ArticleViewModel.swift in Sources */,
 				0A35FB25221614D00018C7D2 /* CollectionHelper.swift in Sources */,
@@ -605,6 +612,7 @@
 				0A35FB1E2216082D0018C7D2 /* ArticleCellViewModel.swift in Sources */,
 				7E4C699A221DBA6E00D02783 /* ViewModelsFactory.swift in Sources */,
 				0A35FB11221604BF0018C7D2 /* NewsCollectionControllerDelegate.swift in Sources */,
+				7E42673D221DCA4500DBC2AD /* UIColorHelper.swift in Sources */,
 				0A35FB2B221618810018C7D2 /* Fonts.swift in Sources */,
 				7EC85EB9221B0B4900F988E3 /* ArticleInputModel.swift in Sources */,
 				0A898B782215B8FD008FC357 /* AppDelegate.swift in Sources */,

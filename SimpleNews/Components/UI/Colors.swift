@@ -11,8 +11,13 @@ import UIKit
 struct Colors {
     
     static var main: UIColor {
-        return .darkGray
+        return UIColor(r: 41, g: 11, b: 128)
     }
+    
+    static var titleColor: UIColor {
+        return .black
+    }
+    
     static var regularText: UIColor {
         return .darkGray
     }
@@ -20,4 +25,5 @@ struct Colors {
     static var secondary: UIColor {
         return .gray
     }
+
 }

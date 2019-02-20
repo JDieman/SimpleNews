@@ -13,6 +13,5 @@ final class TitleLabel: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
         font = Fonts.title
-        textColor = Colors.main
     }
 }

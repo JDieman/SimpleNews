@@ -13,6 +13,5 @@ final class SubTitleLabel: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
         font = Fonts.subtitle
-        textColor = Colors.main
     }
 }
