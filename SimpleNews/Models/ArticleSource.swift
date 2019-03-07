@@ -7,6 +7,8 @@
 //
 
 struct ArticleSource: Decodable {
+    
     var id: String?
     var name: String?
+    
 }

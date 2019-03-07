@@ -11,13 +11,20 @@ struct NewsService {
 
     private unowned var delegate: NewsServiceDelegate
     private var networkClient: NetworkClient
+    private var storage: Storage
     
-    init(delegate: NewsServiceDelegate, networkClient: NetworkClient) {
-        self.delegate = delegate
-        self.networkClient = networkClient
+    var savedNews: News {
+        let articles = storage.getArticles()
+        return News(totalResults: articles.count, articles: articles)
     }
     
-    func getNews(theme: String?) {
+    init(delegate: NewsServiceDelegate, networkClient: NetworkClient, storage: Storage) {
+        self.delegate = delegate
+        self.networkClient = networkClient
+        self.storage = storage
+    }
+    
+    func requestNews(theme: String?) {
         networkClient.getNews(by: theme, completion: completion)
     }
     

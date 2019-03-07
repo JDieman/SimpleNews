@@ -21,7 +21,7 @@ struct ArticleCellViewModel {
     func setup(cell: ArticleCell) {
         cell.model = self
         cell.titleLabel.text = article.title
-        cell.dateLabel.text = article.date?.formatted ?? ""
+        cell.dateLabel.text = article.date.formatted
         cell.articleImageView.image = nil
         if let url = article.imageUrl {
             cell.articleImageView.setImage(with: url) {

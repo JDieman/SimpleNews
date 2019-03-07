@@ -11,7 +11,9 @@ import UIKit
 class NewsViewController: UIViewController {
 
     private lazy var newsController = ControllersFactory.getNewsController(delegate: self)
-    private lazy var newsService = NewsService(delegate: self, networkClient: NetworkFactory.networkClient)
+    private lazy var newsService = NewsService(delegate: self,
+                                               networkClient: NetworkFactory.networkClient,
+                                               storage: StorageFactory.storage)
     
     @IBOutlet private var tableView: NewsTableView! {
         didSet {
@@ -23,7 +25,9 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsService.getNews(theme: nil)
+        newsController.update(newsService.savedNews)
+        tableView.reloadData()
+        newsService.requestNews(theme: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,12 +45,13 @@ extension NewsViewController: NewsServiceDelegate {
     }
     
     func onError(_ message: String) {
-        let alert = UIAlertController(title: Localization.errorTitle.string, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: Localization.errorTitle.string, message: Localization.errorLoadNews.string, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: Localization.repeatTitle.string, style: .default, handler: {
             [weak self]
             _ in
-            self?.newsService.getNews(theme: nil)
+            self?.newsService.requestNews(theme: nil)
         }))
+        alert.addAction(UIAlertAction(title: Localization.cancel.string, style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     

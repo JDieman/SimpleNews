@@ -25,7 +25,7 @@ struct ArticleViewModel {
             vc.imageView.setImage(with: imageUrl)
         }
         vc.titleLabel.text = imputModel.article.title
-        vc.dateLabel.text = imputModel.article.date?.formatted ?? ""
+        vc.dateLabel.text = imputModel.article.date.formatted
         vc.contentLabel.text = imputModel.article.description
     }
     
@@ -34,7 +34,6 @@ struct ArticleViewModel {
     }
     
     func linkButtonTappedAction() {
-        guard let url = imputModel.article.sourceUrl else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        UIApplication.shared.open(imputModel.article.sourceUrl, options: [:], completionHandler: nil)
     }
 }

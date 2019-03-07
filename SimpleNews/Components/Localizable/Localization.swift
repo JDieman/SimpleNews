@@ -12,7 +12,9 @@ enum Localization: String {
     case defaultError
     case linkButtonTitle
     case errorTitle
+    case errorLoadNews
     case repeatTitle
+    case cancel
     
     var string: String {
         return NSLocalizedString(self.rawValue, comment: self.rawValue)

@@ -14,12 +14,11 @@ final class NewsCollectionController {
     private unowned var delegate: NewsCollectionControllerDelegate
     private var items: [ArticleCellViewModel] = []
     
-    init( delegate: NewsCollectionControllerDelegate) {
+    init(delegate: NewsCollectionControllerDelegate) {
         self.delegate = delegate
     }
     
 }
-
 
 extension NewsCollectionController: NewsControllerProtocol {
     

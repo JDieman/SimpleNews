@@ -94,7 +94,7 @@ struct MockArticle: Encodable {
 
 extension Article: Equatable {
     public static func == (lhs: Article, rhs: Article) -> Bool {
-        return (lhs.title == rhs.title) && (lhs.description == rhs.description) && (lhs.publishedAt == rhs.publishedAt)
+        return lhs.sourceUrl == rhs.sourceUrl
     }
     
 }

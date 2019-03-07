@@ -9,4 +9,6 @@
 "defaultError" = "Что-то пошло не так";
 "linkButtonTitle" = "Подробнее...";
 "errorTitle" = "Ошибка";
+"errorLoadNews" = "К сожалению, не удалось загрузить свежие новости";
 "repeatTitle" = "Повторить запрос";
+"cancel" = "Отмена";

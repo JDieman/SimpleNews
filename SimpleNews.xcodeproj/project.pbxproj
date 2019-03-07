@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2CBDAF223121CE00CE902C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDAE223121CE00CE902C /* Storage.swift */; };
+		0A2CBDB22231251500CE902C /* SimpleNews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDB02231251500CE902C /* SimpleNews.xcdatamodeld */; };
+		0A2CBDB62231544900CE902C /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDB52231544900CE902C /* CoreDataStorage.swift */; };
+		0A2CBDB82231548C00CE902C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDB72231548C00CE902C /* CoreDataManager.swift */; };
+		0A2CBDBD223156A600CE902C /* ArticleSourceCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDB9223156A600CE902C /* ArticleSourceCDModel+CoreDataClass.swift */; };
+		0A2CBDBE223156A600CE902C /* ArticleSourceCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDBA223156A600CE902C /* ArticleSourceCDModel+CoreDataProperties.swift */; };
+		0A2CBDBF223156A600CE902C /* ArticleCDModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDBB223156A600CE902C /* ArticleCDModel+CoreDataClass.swift */; };
+		0A2CBDC222315F2E00CE902C /* ArticleCDModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDC122315F2E00CE902C /* ArticleCDModel+CoreDataProperties.swift */; };
+		0A2CBDC42231606900CE902C /* NSManagedObject+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDC32231606900CE902C /* NSManagedObject+Name.swift */; };
+		0A2CBDC6223168FE00CE902C /* StorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDC5223168FE00CE902C /* StorageFactory.swift */; };
+		0A2CBDC82231717300CE902C /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CBDC72231717300CE902C /* FailableDecodable.swift */; };
 		0A35FADB2215BB9D0018C7D2 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A35FAD92215BB9D0018C7D2 /* Moya.framework */; };
 		0A35FADC2215BB9D0018C7D2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A35FADA2215BB9D0018C7D2 /* Alamofire.framework */; };
 		0A35FADF2215BD390018C7D2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A35FADE2215BD390018C7D2 /* Result.framework */; };
@@ -72,6 +83,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2CBDAE223121CE00CE902C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		0A2CBDB12231251500CE902C /* SimpleNews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleNews.xcdatamodel; sourceTree = "<group>"; };
+		0A2CBDB52231544900CE902C /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		0A2CBDB72231548C00CE902C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0A2CBDB9223156A600CE902C /* ArticleSourceCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleSourceCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0A2CBDBA223156A600CE902C /* ArticleSourceCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleSourceCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0A2CBDBB223156A600CE902C /* ArticleCDModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleCDModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0A2CBDC122315F2E00CE902C /* ArticleCDModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleCDModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0A2CBDC32231606900CE902C /* NSManagedObject+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Name.swift"; sourceTree = "<group>"; };
+		0A2CBDC5223168FE00CE902C /* StorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFactory.swift; sourceTree = "<group>"; };
+		0A2CBDC72231717300CE902C /* FailableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDecodable.swift; sourceTree = "<group>"; };
 		0A35FAD92215BB9D0018C7D2 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		0A35FADA2215BB9D0018C7D2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0A35FADE2215BD390018C7D2 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -154,6 +176,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2CBDAD223121AC00CE902C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0A2CBDB32231538400CE902C /* CoreData */,
+				0A2CBDAE223121CE00CE902C /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		0A2CBDB32231538400CE902C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0A2CBDB42231538B00CE902C /* Models */,
+				0A2CBDB52231544900CE902C /* CoreDataStorage.swift */,
+				0A2CBDB72231548C00CE902C /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0A2CBDB42231538B00CE902C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A2CBDBB223156A600CE902C /* ArticleCDModel+CoreDataClass.swift */,
+				0A2CBDC122315F2E00CE902C /* ArticleCDModel+CoreDataProperties.swift */,
+				0A2CBDB9223156A600CE902C /* ArticleSourceCDModel+CoreDataClass.swift */,
+				0A2CBDBA223156A600CE902C /* ArticleSourceCDModel+CoreDataProperties.swift */,
+				0A2CBDC32231606900CE902C /* NSManagedObject+Name.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0A35FAD82215BB9D0018C7D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +227,7 @@
 				0A35FAF22215F8700018C7D2 /* Localizable */,
 				0A35FAE42215C1670018C7D2 /* Services */,
 				0A35FAE12215BE220018C7D2 /* Network */,
+				0A2CBDAD223121AC00CE902C /* Storage */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -212,6 +266,7 @@
 		0A35FAEC2215F66C0018C7D2 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				0A2CBDB02231251500CE902C /* SimpleNews.xcdatamodeld */,
 				0A898B7E2215B8FE008FC357 /* Assets.xcassets */,
 				0A35FAF02215F7CD0018C7D2 /* Localizable.strings */,
 			);
@@ -232,6 +287,7 @@
 				0A35FAF62215FABC0018C7D2 /* News.swift */,
 				0A35FAF92215FAE20018C7D2 /* Article.swift */,
 				0A35FAFB2215FB260018C7D2 /* ArticleSource.swift */,
+				0A2CBDC72231717300CE902C /* FailableDecodable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +299,7 @@
 				0A35FB042215FF640018C7D2 /* ControllersFactory.swift */,
 				7E4C6999221DBA6E00D02783 /* ViewModelsFactory.swift */,
 				7E4C698C221B2F4A00D02783 /* NetworkFactory.swift */,
+				0A2CBDC5223168FE00CE902C /* StorageFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -597,6 +654,7 @@
 				7EC85EC8221B129800F988E3 /* UIImageViewHelper.swift in Sources */,
 				0A35FB3622161FBE0018C7D2 /* ArticleImageView.swift in Sources */,
 				7EC85EC5221B115700F988E3 /* RegularLabel.swift in Sources */,
+				0A2CBDB62231544900CE902C /* CoreDataStorage.swift in Sources */,
 				0A35FB29221617D20018C7D2 /* TitleLabel.swift in Sources */,
 				0A35FB2F2216191B0018C7D2 /* SubtitleLabel.swift in Sources */,
 				7EC85EBC221B0B9900F988E3 /* ArticleViewController.swift in Sources */,
@@ -606,17 +664,27 @@
 				0A35FB25221614D00018C7D2 /* CollectionHelper.swift in Sources */,
 				0A35FAFE2215FC350018C7D2 /* NetworkClient.swift in Sources */,
 				0A35FB052215FF640018C7D2 /* ControllersFactory.swift in Sources */,
+				0A2CBDC42231606900CE902C /* NSManagedObject+Name.swift in Sources */,
+				0A2CBDB82231548C00CE902C /* CoreDataManager.swift in Sources */,
+				0A2CBDBF223156A600CE902C /* ArticleCDModel+CoreDataClass.swift in Sources */,
+				0A2CBDC222315F2E00CE902C /* ArticleCDModel+CoreDataProperties.swift in Sources */,
 				0A35FAFC2215FB260018C7D2 /* ArticleSource.swift in Sources */,
 				0A35FAF72215FABC0018C7D2 /* News.swift in Sources */,
 				0A35FB2122160AC40018C7D2 /* NewsControllerProtocol.swift in Sources */,
+				0A2CBDC82231717300CE902C /* FailableDecodable.swift in Sources */,
 				0A35FB1E2216082D0018C7D2 /* ArticleCellViewModel.swift in Sources */,
 				7E4C699A221DBA6E00D02783 /* ViewModelsFactory.swift in Sources */,
 				0A35FB11221604BF0018C7D2 /* NewsCollectionControllerDelegate.swift in Sources */,
+				0A2CBDB22231251500CE902C /* SimpleNews.xcdatamodeld in Sources */,
 				7E42673D221DCA4500DBC2AD /* UIColorHelper.swift in Sources */,
 				0A35FB2B221618810018C7D2 /* Fonts.swift in Sources */,
+				0A2CBDBE223156A600CE902C /* ArticleSourceCDModel+CoreDataProperties.swift in Sources */,
+				0A2CBDAF223121CE00CE902C /* Storage.swift in Sources */,
+				0A2CBDC6223168FE00CE902C /* StorageFactory.swift in Sources */,
 				7EC85EB9221B0B4900F988E3 /* ArticleInputModel.swift in Sources */,
 				0A898B782215B8FD008FC357 /* AppDelegate.swift in Sources */,
 				7E4C698D221B2F4A00D02783 /* NetworkFactory.swift in Sources */,
+				0A2CBDBD223156A600CE902C /* ArticleSourceCDModel+CoreDataClass.swift in Sources */,
 				0A35FAEB2215F1D10018C7D2 /* DateHelper.swift in Sources */,
 				0A35FB312216196B0018C7D2 /* DescriptionLabel.swift in Sources */,
 				0A35FAE62215C1790018C7D2 /* NewsService.swift in Sources */,
@@ -904,6 +972,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0A2CBDB02231251500CE902C /* SimpleNews.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A2CBDB12231251500CE902C /* SimpleNews.xcdatamodel */,
+			);
+			currentVersion = 0A2CBDB12231251500CE902C /* SimpleNews.xcdatamodel */;
+			path = SimpleNews.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0A898B6C2215B8FD008FC357 /* Project object */;
 }
