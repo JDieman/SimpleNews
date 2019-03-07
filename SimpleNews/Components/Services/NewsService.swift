@@ -31,6 +31,7 @@ struct NewsService {
     private func completion(responce: NewsServiceResponce) {
         switch responce {
         case .onSuccess(let news):
+            storage.update(news.articles)
             delegate.onSuccess(news)
         case .onError(let message):
             delegate.onError(message ?? Localization.defaultError.string)
